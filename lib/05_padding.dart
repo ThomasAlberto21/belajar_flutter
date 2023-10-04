@@ -50,9 +50,10 @@ class FirstScreen extends StatelessWidget {
           margin: const EdgeInsets.all(10),
           alignment: Alignment.center,
           child: Container(
-            padding: const EdgeInsets.all(10), // Padding
+            // Tambahkan properti padding
+            padding: const EdgeInsets.all(20),
             child: const Text(
-              "Hello World",
+              "Hello World!",
               style: TextStyle(
                 color: Colors.white,
                 fontWeight: FontWeight.bold,
