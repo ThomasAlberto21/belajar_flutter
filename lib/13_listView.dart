@@ -27,9 +27,8 @@ class ScrollingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView.separated(
-        itemCount: numberList.length,
-        itemBuilder: (BuildContext context, int index) {
+      body: ListView(
+        children: numberList.map((number) {
           return Container(
             height: 250,
             margin: const EdgeInsets.all(10),
@@ -39,15 +38,12 @@ class ScrollingScreen extends StatelessWidget {
             ),
             child: Center(
               child: Text(
-                '${numberList[index]}',
+                '$number',
                 style: const TextStyle(fontSize: 50),
               ),
             ),
           );
-        },
-        separatorBuilder: (BuildContext context, int index) {
-          return const Divider();
-        },
+        }).toList(),
       ),
     );
   }
